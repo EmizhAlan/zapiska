@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Чат</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Firebase Чат</h1>
+
+    <!-- Блок авторизации -->
+    <div id="auth-container">
+        <h2>Добро пожаловать</h2>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Пароль">
+        <input type="text" id="username" placeholder="Ваше имя" maxlength="20">
+        <div class="flex">
+            <button id="sign-up">Регистрация</button>
+            <button id="sign-in">Вход</button>
+        </div>
+        <div id="auth-error" class="error"></div>
+    </div>
+
+    <!-- Блок чата -->
+    <div id="chat-container" style="display: none;">
+        <div id="chat-header">
+            <h2>Чат</h2>
+            <button id="sign-out">Выйти</button>
+        </div>
+        <div id="messages"></div>
+        <input type="text" id="message-input" placeholder="Введите сообщение">
+        <button id="send-message">Отправить</button>
+        <div id="chat-error" class="error"></div>
+    </div>
+
+    <!-- Подключаем скрипт как модуль -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
